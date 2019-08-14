@@ -24,7 +24,7 @@ window.onload = () => {
         let original = customTags[i];
         let replacement = document.createElement(original.getAttribute('tag-name'));
         [...original.attributes].forEach(({name, value}) => {
-            let originalTagName = original.tagName.toLowerCase()
+            let originalTagName = original.tagName.toLowerCase();
             name === 'tag-name' && ariaRoles.includes(originalTagName) ?
                 replacement.setAttribute('role', originalTagName)
                 : name != 'tag-name' ? replacement.setAttribute(name, value) : null
